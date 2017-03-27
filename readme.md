@@ -1,24 +1,29 @@
 # New Macbook developer environment setup
 
-## Install ITerm2
+### Install ITerm2
   - update preferences/profile
-## Install SublimeText
+### Install SublimeText
   - install package control
   - install Babel package
   - install Materialize package
+  - install SASS package
   - update preferences
-## Add .gitconfig to Users/User directory
-## Install XCODE CLI tools
+### Add / import old .gitconfig into /Users/USERNAME directory
+### Install XCODE CLI tools
   `xcode-select --install`
-## Install Homebrew
+### Install Homebrew
   `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-## Install openssl, readline, zlib, ssh, libxml2 (Note: zlib, ssh, and libzml2 seem to be present in new mac by default)
+### Use zsh
+  `chsh -s $(which zsh)`
+  - install [prezto](https://github.com/sorin-ionescu/prezto)
+### Install openssl, readline, zlib, ssh, libxml2 (Note: zlib, ssh, and libxml2 included by default on new macs)
   ```
   brew install openssl
   brew install readline
-  brew install libxml2
   ```
-## Install SourceTree application
-## Install additional browsers: Chrome, Firefox, Opera
-## Install PSequel
-## Install VLC
+### Install secondary applications
+  - SourceTree
+  - Chrome, Firefox, Opera
+  - PSequel
+  - VLC
+  - Spotify
