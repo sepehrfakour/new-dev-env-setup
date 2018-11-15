@@ -178,10 +178,13 @@ also, optionally add:
 
 # NPM Token
 - Get [NPM token](https://docs.npmjs.com/creating-and-viewing-authentication-tokens)
+	- `npm login`
+	- `subl ~/.npmrc` and copy value assigned to `//registry.npmjs.org/:_authToken=`
 - Update `.bash_profile` in  in `$HOME` (`/Users/USER_NAME`) directory:
 ```
-export NPM_TOKEN="INSERT_NPM_TOKEN"
+export NPM_TOKEN="YOUR_NPM_TOKEN"
 ```
+replacing "YOUR_NPM_TOKEN" with the value copied from `~/.npmrc`.
 
 ## Git Flow
 - Install [Git Flow](https://github.com/nvie/gitflow)
@@ -227,4 +230,4 @@ unalias heroku
 
 ## Algolia CLI
 - [Install Algolia CLI tools](https://github.com/algolia/algolia-cli)
-	- `npm install -g @algolia/cli`
+	- `npm i -g @algolia/cli`
