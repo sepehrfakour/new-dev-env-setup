@@ -195,7 +195,8 @@ replacing "YOUR_NPM_TOKEN" with the value copied from `~/.npmrc`.
 	- `brew install yarn --without-node` or `brew install yarn` if not using `nvm`
 
 ## Misc packages 
-Examples: `openssl`, `readline`, etc.
+Primary examples: `openssl`, `readline`, `jq`.
+Also check for: `gnu-sed`, `xz`, `libxml2`, `autoconf`, `icu4c`, `pkg-config`, `sqlite`, `rbenv`, `gdbm`
 ```sh
 brew install openssl
 brew install readline
@@ -231,3 +232,7 @@ unalias heroku
 ## Algolia CLI
 - [Install Algolia CLI tools](https://github.com/algolia/algolia-cli)
 	- `npm i -g @algolia/cli`
+
+## JQ CLI
+- Install [jq](https://stedolan.github.io/jq/) command-line JSON processor
+	- `brew install jq`
