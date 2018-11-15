@@ -26,7 +26,6 @@
 	- Install Sass
 	- Install SideBarEnhancements
 	- Install TypeScript
-
 - Update SublimeText preferences:
 	- Hold `command` and press `,` to open preferences
 	- Edit "Users" preferences file (should open in right-most pane... saves to `/Users/USER_NAME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings`:
@@ -74,17 +73,27 @@
 - Install [Homerew](https://brew.sh/) package manager
 	- `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
+## ZSH
+- Install [ZSH](http://www.zsh.org/)
+- `chsh -s $(which zsh)`
+- Install [Prezto](https://github.com/sorin-ionescu/prezto)
+
 ## Node
 - Install [Node.js](https://nodejs.org/en/)
 	- `brew install node`
 - Install [Node Version Manager](https://github.com/creationix/nvm)
 	- `brew install nvm`
 	- `mkdir ~/.nvm`
+	- Append to `.zshrc` (or `/Users/USER_NAME/.zprezto/runcoms/zshrc`):
+```
+# Add nvm env vars
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+```
 	- `nvm install node`
 	- `nvm install --lts`
 	- `nvm use node`
 	- `nvm run node --version`
-- Note: to execute `nvm` in every shell session, one must also complete the ZSH setup, including modifying the `.zshrc` file. For more info, see [here](https://www.wdiaz.org/how-to-install-nvm-with-homebrew/) or [here](http://dev.topheman.com/install-nvm-with-homebrew-to-use-multiple-versions-of-node-and-iojs-easily/).
 	
 
 ## Git
@@ -94,12 +103,12 @@
 - Update `.gitconfig` in `$HOME` (`/Users/USER_NAME`) directory:
 ```
 [user]
-	email = GITHUB_USER_NAME@users.noreply.github.com
-	name = GITHUB_USER_NAME
+  email = GITHUB_USER_NAME@users.noreply.github.com
+  name = GITHUB_USER_NAME
 
 [core]
   editor = nano
-	excludesfile = /Users/USER_NAME/.gitignore_global
+  excludesfile = /Users/USER_NAME/.gitignore_global
 
 [merge]
   summary=true
@@ -138,7 +147,7 @@
   uncommit = reset --soft HEAD^
   wc = whatchanged -p --abbrev-commit --pretty=medium
 [push]
-	default = simple
+  default = simple
 ```
 also, optionally add:
 ```
@@ -172,21 +181,9 @@ export NPM_TOKEN="INSERT_NPM_TOKEN"
 - Install [Prezto](https://github.com/sorin-ionescu/prezto)
 - Update `.zshrc` (or `/Users/USER_NAME/.zprezto/runcoms/zshrc`):
 ```
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
 # Add nvm env vars
 export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
+. "$(brew --prefix nvm)/nvm.sh"
 ```
 
 ## Yarn
