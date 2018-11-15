@@ -16,6 +16,7 @@
 
 ## Text editor
 - Install [SublimeText](https://www.sublimetext.com/)
+- Create simlink `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 - Install [Package Control](https://packagecontrol.io/installation)
 	- Install Babel
 	- Install GitGutter
@@ -74,7 +75,16 @@
 
 ## Node
 - Install [Node.js](https://nodejs.org/en/)
+	- `brew install node`
 - Install [Node Version Manager](https://github.com/creationix/nvm)
+	- `brew install nvm`
+	- `mkdir ~/.nvm`
+	- `nvm install node`
+	- `nvm install --lts`
+	- `nvm use node`
+	- `nvm run node --version`
+- Note: to execute `nvm` in every shell session, one must also complete the ZSH setup, including modifying the `.zshrc` file. For more info, see [here](https://www.wdiaz.org/how-to-install-nvm-with-homebrew/) or [here](http://dev.topheman.com/install-nvm-with-homebrew-to-use-multiple-versions-of-node-and-iojs-easily/).
+	
 
 ## Git
 - Install [Git](https://git-scm.com/)
@@ -177,6 +187,10 @@ fi
 export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
 ```
+
+## Yarn
+- Install [Yarn](https://yarnpkg.com)
+	- `brew install yarn --without-node` or `brew install yarn` if not using `nvm`
 
 ## Misc packages 
 Examples: `openssl`, `readline`, etc.
