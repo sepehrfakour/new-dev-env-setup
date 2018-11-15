@@ -74,9 +74,20 @@
 	- `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 ## ZSH
-- Install [ZSH](http://www.zsh.org/)
-- `chsh -s $(which zsh)`
+- Optionally install latest version of [ZSH](http://www.zsh.org/) with Homebrew:
+	- `brew install zsh`
+	- `echo /usr/local/bin/zsh >> /etc/shells`
+- Set ZSH as default shell:
+	- `chsh -s $(which zsh)` (`chsh -s /bin/zsh` to use OS version, `chsh -s /usr/local/bin/zsh` to use Homebrew version)
 - Install [Prezto](https://github.com/sorin-ionescu/prezto)
+	- `git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
+	- Run:
+```
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+	ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+```
 
 ## Node
 - Install [Node.js](https://nodejs.org/en/)
@@ -218,6 +229,8 @@ brew install readline
 
 ## Heroku CLI
 - [Install Heroku CLI tools](https://devcenter.heroku.com/articles/heroku-cli)
+	- `brew install heroku/brew/heroku`
 
 ## Algolia CLI
 - [Install Algolia CLI tools](https://github.com/algolia/algolia-cli)
+	- `npm install -g @algolia/cli`
