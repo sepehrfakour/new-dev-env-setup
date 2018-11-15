@@ -16,7 +16,8 @@
 
 ## Text editor
 - Install [SublimeText](https://www.sublimetext.com/)
-- Create simlink `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+- Create `subl` command via simlink
+	- `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 - Install [Package Control](https://packagecontrol.io/installation)
 	- Install Babel
 	- Install GitGutter
