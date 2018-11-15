@@ -65,8 +65,8 @@
 }
 ```
 
-## XCODE
-- Install [XCODE CLI tools](https://www.google.com/search?q=xcode+cli+tools+install&oq=xcode+cli+tools&aqs=chrome.0.0j69i57j0l4.2785j0j7&sourceid=chrome&ie=UTF-8)
+## Xcode
+- Install [Xcode CLI tools](https://www.google.com/search?q=xcode+cli+tools+install&oq=xcode+cli+tools&aqs=chrome.0.0j69i57j0l4.2785j0j7&sourceid=chrome&ie=UTF-8)
 	- `xcode-select --install`
 
 ## Homebrew
@@ -101,15 +101,17 @@ done
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 ```
-
-	- `nvm install node`
-	- `nvm install --lts`
+- Configure `nvm`:
+	- `nvm install node` or `nvm install --lts`
 	- `nvm use node`
 	- `nvm run node --version`
 	
 
 ## Git
 - Install [Git](https://git-scm.com/)
+	- Should already be installed following Xcode CLI tools installation
+	- Try to run `git --version`. If `git` is not installed, Mac OS should then prompt to install.
+	- Alternatively, run `brew install git`.
 
 ## Gitconfig
 - Update `.gitconfig` in `$HOME` (`/Users/USER_NAME`) directory:
