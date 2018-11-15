@@ -186,17 +186,6 @@ export NPM_TOKEN="INSERT_NPM_TOKEN"
 - Install [Git Flow](https://github.com/nvie/gitflow)
 - `brew install git-flow`
 
-## ZSH
-- Install [ZSH](http://www.zsh.org/)
-- `chsh -s $(which zsh)`
-- Install [Prezto](https://github.com/sorin-ionescu/prezto)
-- Update `.zshrc` (or `/Users/USER_NAME/.zprezto/runcoms/zshrc`):
-```
-# Add nvm env vars
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-```
-
 ## Yarn
 - Install [Yarn](https://yarnpkg.com)
 	- `brew install yarn --without-node` or `brew install yarn` if not using `nvm`
@@ -230,6 +219,10 @@ brew install readline
 ## Heroku CLI
 - [Install Heroku CLI tools](https://devcenter.heroku.com/articles/heroku-cli)
 	- `brew install heroku/brew/heroku`
+	- If `which heroku` returns `heroku: aliased to nocorrect heroku` then append to `~/.zshrc`:
+```
+unalias heroku
+```
 
 ## Algolia CLI
 - [Install Algolia CLI tools](https://github.com/algolia/algolia-cli)
