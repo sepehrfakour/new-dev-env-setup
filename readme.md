@@ -26,7 +26,7 @@
 	- Install TypeScript
 
 - Update SublimeText preferences:
-	- Press hold `command` and press `,` to open preferences
+	- Hold `command` and press `,` to open preferences
 	- Edit "Users" preferences file (should open in right-most pane... saves to `/Users/USER_NAME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings`:
 ```json
 {
