@@ -206,7 +206,7 @@ Install [Postgres](https://www.postgresql.org/)
 - [1Password](https://1password.com/)
 
 ## Heroku CLI
-- (Install Heroku CLI tools)[https://devcenter.heroku.com/articles/heroku-cli]
+- [Install Heroku CLI tools](https://devcenter.heroku.com/articles/heroku-cli)
 
 ## Algolia CLI
-- (Install Algolia CLI tools)[https://github.com/algolia/algolia-cli]
+- [Install Algolia CLI tools](https://github.com/algolia/algolia-cli)
